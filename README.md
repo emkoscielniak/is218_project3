@@ -1,28 +1,139 @@
 # 🚀 MyWebClass Hosting Platform
 
-**Modern Docker-based web hosting for CS students**
+**Master Production Web Hosting from Zero to Deployment**
 
-This repository provides a complete, production-ready web hosting platform designed for Computer Science education. Students learn modern DevOps practices while hosting their own websites with automatic SSL certificates.
+A complete, hands-on guide to building and securing your own public web server. This isn't just theory—you'll build a real production system that employers will be impressed by in interviews.
 
-## 🎯 What You'll Learn
+---
 
-- **Docker & Containerization** - Industry-standard deployment
-- **Reverse Proxy** - Load balancing and routing with Caddy
-- **SSL/TLS Security** - Automatic HTTPS with Let's Encrypt
-- **Domain Management** - DNS configuration and subdomains
-- **Git Workflows** - Version control and deployment
-- **System Administration** - Linux server management
-- **Web Security** - Firewall, monitoring, and best practices
+## 📚 Complete Step-by-Step Guide
 
-## 🏗️ Architecture
+This repository is organized like a textbook, with each chapter teaching you a critical skill. Follow them in order to build your production hosting platform from scratch.
 
-```
-Internet → Caddy (Reverse Proxy + SSL) → Your Web Applications
-           ↓
-       Auto SSL Certificates (Let's Encrypt)
-```
+### 🔰 Part 1: Foundation & Security (Chapters 1-6)
 
-## 📚 Repository Structure
+**Learn the fundamentals of server security and system administration**
+
+1. **[Server Setup](docs/01-server-setup.md)** - Get your first VPS running
+   - Choosing a VPS provider
+   - Initial SSH connection
+   - Understanding your server
+
+2. **[User Management](docs/02-user-management.md)** - Create your admin account securely  
+   - Why you shouldn't use root
+   - Creating secure user accounts
+   - SSH key authentication
+
+3. **[SSH Hardening](docs/03-ssh-hardening.md)** - Lock down remote access
+   - Disabling root login
+   - Key-only authentication
+   - Security best practices
+
+4. **[Firewall Configuration](docs/04-firewall-setup.md)** - Control network traffic
+   - Understanding firewalls
+   - UFW setup and configuration
+   - Opening necessary ports
+
+5. **[Intrusion Prevention](docs/05-fail2ban.md)** - Stop attackers automatically
+   - What is Fail2Ban
+   - Monitoring failed logins
+   - Automated IP banning
+
+6. **[Rootkit Detection](docs/06-rootkit-detection.md)** - Monitor system integrity
+   - Understanding rootkits
+   - Security scanning tools
+   - Automated monitoring
+
+### 🚀 Part 2: Deployment & Applications (Chapters 7-10)
+
+**Build and deploy production-ready web applications**
+
+7. **[Docker Installation](docs/07-docker-installation.md)** - Modern containerization
+   - What is Docker
+   - Installation and setup
+   - Docker security
+
+8. **[Reverse Proxy with Caddy](docs/08-reverse-proxy-caddy.md)** - Automatic HTTPS
+   - Understanding reverse proxies
+   - Caddy configuration
+   - Automatic SSL certificates
+
+9. **[Deploying Applications](docs/09-deploying-applications.md)** - Go live
+   - Using project templates
+   - Domain configuration
+   - Production deployment
+
+10. **[Monitoring & Maintenance](docs/10-monitoring-maintenance.md)** - Keep it running
+    - Log management
+    - System updates
+    - Backup strategies
+
+### 📖 Appendices
+
+- **[Troubleshooting Guide](docs/troubleshooting.md)** - Solutions to common problems
+- **[Command Reference](docs/command-reference.md)** - Quick command lookup
+- **[Additional Resources](docs/resources.md)** - Continue learning
+
+---
+
+## 🎯 What You'll Build
+
+## 🎯 What You'll Build
+
+By completing this guide, you'll have:
+
+- ✅ **Secure Linux Server** - Hardened against common attacks
+- ✅ **Automatic HTTPS** - Free SSL certificates that renew automatically
+- ✅ **Production Docker Setup** - Industry-standard containerization
+- ✅ **Live Web Applications** - Real sites accessible to anyone
+- ✅ **Portfolio Project** - Impressive talking point for interviews
+- ✅ **Practical Skills** - System administration, security, DevOps
+
+## 🎓 What You'll Learn
+
+**Security & System Administration:**
+- Linux server management and hardening
+- SSH security and key-based authentication  
+- Firewall configuration (UFW)
+- Intrusion detection and prevention (Fail2Ban)
+- Rootkit detection and system monitoring
+- Security best practices
+
+**Modern DevOps:**
+
+**Modern DevOps:**
+- Docker and containerization
+- Docker Compose for multi-container apps
+- Reverse proxy architecture with Caddy
+- Automatic SSL/TLS with Let's Encrypt
+- Zero-downtime deployments
+- Infrastructure as code
+
+**Web Development & Deployment:**
+- Domain and DNS configuration
+- Static site hosting
+- Node.js and Python application deployment
+- Environment variable management
+- Log monitoring and debugging
+- Production troubleshooting
+
+---
+
+## 🚦 Getting Started
+
+**Prerequisites:**
+- Basic command line knowledge
+- A domain name (optional but recommended)
+- $5-10/month for a VPS (DigitalOcean, Linode, etc.)
+- Your GitHub SSH key
+
+**Start Here:**
+1. Begin with [Chapter 1: Server Setup](docs/01-server-setup.md)
+2. Follow each chapter in order
+3. Don't skip chapters—each builds on the previous one
+4. Test everything as you go
+
+---
 
 ```
 hosting/
