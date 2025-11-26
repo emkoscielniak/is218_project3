@@ -2,7 +2,8 @@ name: Deploy to Droplet
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -17,14 +18,24 @@ jobs:
           echo "${{ secrets.SSH_KEY_B64 }}" | base64 -d > private_key
           chmod 600 private_key
 
-
       - name: Deploy to Droplet
         run: |
           ssh -o StrictHostKeyChecking=no -i private_key ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            set -e
+
+            echo ">>> Pulling latest code..."
             cd ~/is218_project3
             git pull
+
+            echo ">>> Redeploying infrastructure..."
             cd infrastructure
             docker compose down
             docker compose up -d --build
+
+            echo ">>> Redeploying static site..."
+            cd ~/is218_project3/projects/static-site
+            docker compose up -d --build
+
+            echo ">>> Deployment complete."
           EOF
 
