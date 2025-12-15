@@ -1,11 +1,16 @@
 # Global options
 {
-    email admin@mywebclass.org
+    email emiskoscielniak@gmail.com
     admin off
 }
 
-# Main website
-www.mywebclass.org {
+# Main website - redirect www to non-www
+www.emkoscielniak.com {
+    redir https://emkoscielniak.com{uri} permanent
+}
+
+# Main portfolio website
+emkoscielniak.com {
     reverse_proxy static-site:80
     
     encode gzip
@@ -18,7 +23,7 @@ www.mywebclass.org {
     }
     
     log {
-        output file /var/log/caddy/mywebclass.log {
+        output file /var/log/caddy/emkoscielniak.log {
             roll_size 10MB
             roll_keep 5
         }

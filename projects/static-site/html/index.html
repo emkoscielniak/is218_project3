@@ -3,131 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emis Koscielniak – IS 218 Project 3</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            padding: 60px;
-            max-width: 800px;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .subtitle {
-            font-size: 1.3em;
-            color: #666;
-            margin-bottom: 40px;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-            text-align: left;
-        }
-        
-        .feature {
-            padding: 20px;
-            border-radius: 10px;
-            background: #f8f9fa;
-        }
-        
-        .feature-icon {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        
-        .feature h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        
-        .status {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #10b981;
-            color: white;
-            border-radius: 25px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Emis Koscielniak</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/portfolio-icon.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Emis Koscielniak- MyWebClass Hosting</h1>
-        <p class="subtitle">IS 218 – Project 3: Docker, Caddy, PostgreSQL & GitHub Actions</p>
-        
-        <div class="status">✓ System Online</div>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <h3>Secure</h3>
-                <p>HTTPS with Caddy and Let's Encrypt on emkoscielniak.com</p>
-            </div>
-            
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <h3>Automated CI/CD</h3>
-                <p>GitHub Actions deploys changes to my Droplet automatically</p>
-            </div>
-            
-            <div class="feature">
-                <div class="feature-icon">🐘</div>
-                <h3>PostgreSQL + pgAdmin</h3>
-                <p>Managed PostgreSQL 16 instance with pgAdmin at db.emkoscielniak.com</p>
-            </div>
-            
-            <div class="feature">
-                <div class="feature-icon">🔄</div>
-                <h3>Course Project</h3>
-                <p>Infrastructure for IS 218 Project 3: hosting + monitoring</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Emis Koscielniak</a>
+            <ul class="nav-menu">
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="documents/resume.pdf" class="nav-link resume-btn" target="_blank">Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-        
-        <div class="footer">
-            <p>Built with Docker, Caddy, PostgreSQL, and ❤️ by Emis Koscielniak.</p>
-            <p>Source code: <a href="https://github.com/emkoscielniak/is218_project3">github.com/emkoscielniak/is218_project3</a></p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="profile-placeholder">
+                        <img src="images/profile.jpg" alt="Emis Koscielniak Profile">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Hi! I'm Emis Koscielniak.</h1>
+                    <p class="hero-description">I'm a third-year Human-Computer Interaction major and Data Analytics minor, currently on the BS/MS track in Information Systems at NJIT.</p>
+                    <p class="hero-description">I am passionate about user-centered design, accessibility, and creating intuitive interfaces that solve real problems.</p>
+                    <div class="hero-buttons">
+                        <a href="#work" class="btn btn-yellow">View My Work</a>
+                        <a href="#contact" class="btn btn-yellow">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- My Toolkit Section -->
+    <section id="about" class="toolkit-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title yellow-bg">My Toolkit</h2>
+                <p class="section-subtitle">I execute the design process through iteration and a structured data-driven approach to optimize product performance and maximize user success. Here are the tools I use to make my visions a reality:</p>
+            </div>
+            <div class="toolkit-grid">
+                <div class="toolkit-column">
+                    <h3>UX Research & Methods</h3>
+                    <ul>
+                        <li>User Research</li>
+                        <li>Information Architecture</li>
+                        <li>Wireframing & User Mapping</li>
+                        <li>Usability Testing</li>
+                        <li>Interaction & Visual Design</li>
+                        <li>Design Systems</li>
+                        <li>UX Writing</li>
+                    </ul>
+                </div>
+                <div class="toolkit-column">
+                    <h3>Design & Prototyping Tools</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Adobe XD</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Notion</li>
+                        <li>GlooMaps</li>
+                        <li>Framer</li>
+                    </ul>
+                </div>
+                <div class="toolkit-column">
+                    <h3>Development & Systems</h3>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Git/GitHub</li>
+                        <li>Terminal/CLI</li>
+                        <li>Accessibility (WCAG)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Projects Section -->
+    <section id="work" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title yellow-bg">Featured Projects</h2>
+                <p class="section-subtitle">See What I've Been Working On</p>
+            </div>
+            
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                <button class="filter-btn" onclick="filterProjects('research')">UX Research</button>
+                <button class="filter-btn" onclick="filterProjects('design')">UX Design</button>
+                <button class="filter-btn" onclick="filterProjects('figma')">Figma</button>
+                <button class="filter-btn" onclick="filterProjects('prototyping')">Prototyping</button>
+                <button class="filter-btn" onclick="filterProjects('development')">Front-End Development</button>
+                <button class="filter-btn" onclick="filterProjects('architecture')">Information Architecture</button>
+                <button class="filter-btn" onclick="filterProjects('analysis')">Qualitative Analysis</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1: EventGenie -->
+                <a href="project1.html" class="project-card-link">
+                    <article class="project-card project-research project-design project-figma project-prototyping">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <img src="images/event-genie-logo.png" alt="EventGenie Project">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">EventGenie</h3>
+                            <div class="project-tags">
+                                <span class="tag">UX Design</span>
+                                <span class="tag">UX Research</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">Leadership</span>
+                                <span class="tag">Data Synthesis</span>
+                                <span class="tag">Prototyping</span>
+                            </div>
+                            <p class="project-description">
+                                Led a team in designing EventGenie, a web application to simplify hosts' catering experience through effective management of attendee's dietary restrictions. This project focused on user research, journey mapping, and an iterative design process that resulted in usability testing of a medium fidelity prototype.
+                            </p>
+                            <span class="project-link">View Project</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Project 2: Starter's Grid -->
+                <a href="project2.html" class="project-card-link">
+                    <article class="project-card project-design project-development project-architecture project-figma project-prototyping">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <img src="images/project2-thumbnail.png" alt="Starter's Grid Project">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Starter's Grid</h3>
+                            <div class="project-tags">
+                                <span class="tag">Information Architecture</span>
+                                <span class="tag">Front-End Development</span>
+                                <span class="tag">Prototyping</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">GitHub</span>
+                                <span class="tag">HTML/CSS</span>
+                            </div>
+                            <p class="project-description">
+                                Designed and developed a fully responsive educational website that introduces beginners to Formula 1 and Formula E. The project utilizes Information Architecture and mobile-first development to organize complex content, resulting in a functional, code-based live product.
+                            </p>
+                            <span class="project-link">View Project</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Project 3: Diary Studies Report -->
+                <a href="project3.html" class="project-card-link">
+                    <article class="project-card project-research project-analysis">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <img src="images/project3-thumbnail.png" alt="Diary Studies Report Project">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Diary Studies Report</h3>
+                            <div class="project-tags">
+                                <span class="tag">UX Research</span>
+                                <span class="tag">Qualitative Analysis</span>
+                                <span class="tag">Thematic Analysis</span>
+                                <span class="tag">Affinity Mapping</span>
+                                <span class="tag">Empathy Map</span>
+                            </div>
+                            <p class="project-description">
+                                An individual research study utilizing a 7-day diary method from 20 participants to capture the context of user media consumption in the moment. This project utilized qualitative analysis, affinity mapping, and empathy maps to synthesize findings into a digestible format.
+                            </p>
+                            <span class="project-link">View Project</span>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title green-bg">Let's Connect!</h2>
+            </div>
+            <div class="contact-buttons">
+                <a href="mailto:emiskoscielniak@gmail.com" class="contact-btn yellow-btn">
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/emily-k-20a949236" class="contact-btn yellow-btn" target="_blank">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/emkoscielniak" class="contact-btn yellow-btn" target="_blank">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Emis Koscielniak. Designed & developed with care.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple inline filter system
+        let activeFilters = ['all'];
+        
+        function filterProjects(category) {
+            console.log('Filter clicked:', category);
+            
+            const clickedButton = event.target;
+            const allCategories = ['research', 'design', 'figma', 'prototyping', 'development', 'architecture', 'analysis'];
+            
+            if (category === 'all') {
+                // Reset to show all
+                activeFilters = ['all'];
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                clickedButton.classList.add('active');
+            } else {
+                // Remove 'all' if present
+                if (activeFilters.includes('all')) {
+                    activeFilters = activeFilters.filter(f => f !== 'all');
+                    document.querySelector('[onclick="filterProjects(\'all\')"]').classList.remove('active');
+                }
+                
+                // Toggle the filter
+                if (activeFilters.includes(category)) {
+                    activeFilters = activeFilters.filter(f => f !== category);
+                    clickedButton.classList.remove('active');
+                } else {
+                    activeFilters.push(category);
+                    clickedButton.classList.add('active');
+                }
+                
+                // Check if all categories are now selected
+                const allCategoriesSelected = allCategories.every(cat => activeFilters.includes(cat));
+                
+                if (allCategoriesSelected) {
+                    // If all categories are selected, switch to "All"
+                    activeFilters = ['all'];
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelector('[onclick="filterProjects(\'all\')"]').classList.add('active');
+                    console.log('All categories selected, switching to "All"');
+                } else if (activeFilters.length === 0) {
+                    // If no filters, default to all
+                    activeFilters = ['all'];
+                    document.querySelector('[onclick="filterProjects(\'all\')"]').classList.add('active');
+                }
+            }
+            
+            console.log('Active filters:', activeFilters);
+            
+            // Apply filters
+            const projects = document.querySelectorAll('.project-card');
+            projects.forEach(project => {
+                let shouldShow = false;
+                
+                if (activeFilters.includes('all')) {
+                    shouldShow = true;
+                } else {
+                    // Check if project has any active filter class
+                    shouldShow = activeFilters.some(filter => 
+                        project.classList.contains('project-' + filter)
+                    );
+                }
+                
+                project.style.display = shouldShow ? 'block' : 'none';
+                console.log('Project classes:', project.className, 'Show:', shouldShow);
+            });
+        }
+    </script>
 </body>
 </html>
